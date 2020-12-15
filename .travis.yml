@@ -2,7 +2,10 @@ node_js:
 - "stable"
 - "4"
 - "iojs"
-- "0.12"
+- "12"
 language: node_js
+arch:
+ - amd64
+ - ppc64le
 script: "npm run-script test-travis"
 after_script: "npm install coveralls@2 && cat ./coverage/lcov.info | coveralls"
